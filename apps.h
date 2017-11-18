@@ -8,6 +8,7 @@ using namespace std;
 const int contact_builder = 100;
 const int system_error = 101;
 
+//    give error
 namespace ERROR{
 	void puterror(int ask) {
 		switch(ask) {
@@ -19,6 +20,11 @@ namespace ERROR{
 }
 
 namespace Check {
+	namespace All {
+		bool main() {
+			return true;
+		}
+	}
 	namespace First_Use {
 		bool main() {   //the bool will return this function solve the problem or not
 			fstream first_Usefile;
@@ -47,4 +53,15 @@ namespace Check {
 			first_use_file << true;
 		}
 	}	
+}
+
+namespace Main_do {
+	bool main() {
+		if(Check::All::main()) {
+			//...
+		} else {
+			 ERROR::puterror(100);
+		}
+		return true;
+	}
 }

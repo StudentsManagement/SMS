@@ -5,5 +5,5 @@
 using namespace std;
 
 int main() {
-
+	Main_do::main();
 }
